@@ -1,17 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <Header />
+    </div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <h1>hello lz!</h1> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <!-- <User :users="users"/> -->
+    <Home />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import User from './components/User'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './views/Home'
 
 export default {
   name: 'app',
+  data(){
+    return{
+      users:[
+                {name:"AA",age:"15"},
+                {name:"BB",age:"18"},
+                {name:"BB",age:"18"},
+                {name:"BB",age:"18"},
+            ]
+    }
+  },
   components: {
-    HelloWorld
+    HelloWorld,
+    User,
+    Header,
+    Footer,
+    Home
   }
 }
 </script>
